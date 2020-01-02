@@ -19,7 +19,7 @@ namespace AnimalTracks.Pages
 
         public void OnGet()
         {
-
+            _logger.LogInformation("This is a Log Message.");
         }
     }
 }

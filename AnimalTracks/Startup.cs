@@ -55,7 +55,11 @@ namespace AnimalTracks
                     options.ClientSecret = googleAuthNSection["ClientSecret"];
                 });
 
-
+            services.AddLogging(options =>
+            {
+                options.SetMinimumLevel(LogLevel.Information);
+                options.AddConsole();
+            });
             services.AddControllers();
             services.AddRazorPages();
         }
